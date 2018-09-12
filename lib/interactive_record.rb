@@ -54,7 +54,8 @@ class InteractiveRecord
     end
 
     def self.find_by(thing)
-      #thing is a hash, key is symbol so must be converted to text, value is unknown
+      #thing is a hash, key is symbol so must be converted to text, value is random.
+      #It is either a integer or a symbol.
       if !(thing.values[0].is_a? Integer)
       sql = "SELECT * FROM #{self.table_name} WHERE #{thing.keys[0].to_s} = '#{thing.values[0]}'"
       #quotes needed for incoming TEXT
