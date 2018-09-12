@@ -25,6 +25,7 @@ class InteractiveRecord
       end
     end
 
-    def
+    def save
+      sql
 
 end
