@@ -56,11 +56,11 @@ class InteractiveRecord
     def self.find_by(thing)
       binding.pry
       col_names_for_insert
-      if thing.values[0].is_a? Integer
+      if !(thing.values[0].is_a? Integer)
       sql = "SELECT * FROM #{self.table_name} WHERE #{thing.keys[0].to_s} = '#{thing.values[0]}'"
       else
-      sql = "SELECT * FROM #{self.table_name} WHERE #{thing.keys[0].to_s} = '#{thing.values[0]}'"
-    end
+      sql = "SELECT * FROM #{self.table_name} WHERE #{thing.keys[0].to_s} = #{thing.values[0]}"
+      end
     end
 
 end
