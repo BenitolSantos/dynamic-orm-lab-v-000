@@ -62,6 +62,7 @@ class InteractiveRecord
       DB[:conn].execute(sql)
       else
       sql = "SELECT * FROM #{self.table_name} WHERE #{thing.keys[0].to_s} = #{thing.values[0]}"
+      #not needed for integer
       DB[:conn].execute(sql)
       end
     end
