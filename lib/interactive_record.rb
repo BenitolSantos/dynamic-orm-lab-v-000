@@ -54,5 +54,6 @@ class InteractiveRecord
 
     def self.find_by(thing)
       sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
+    end
 
 end
