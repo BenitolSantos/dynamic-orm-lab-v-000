@@ -61,5 +61,6 @@ class InteractiveRecord
       else
       sql = "SELECT * FROM #{self.table_name} WHERE #{thing.keys[0].to_s} = '#{thing.values[0]}'"
     end
+    end
 
 end
