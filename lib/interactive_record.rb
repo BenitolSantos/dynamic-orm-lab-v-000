@@ -6,5 +6,7 @@ class InteractiveRecord
     DB[:conn].results_as_hash = true
 
     sql = "pragma table_info('#{{table_name}}')"
+
+    
   end
 end
