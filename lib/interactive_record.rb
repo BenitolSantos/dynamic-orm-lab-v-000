@@ -56,8 +56,10 @@ class InteractiveRecord
     def self.find_by(thing)
       if !(thing.values[0].is_a? Integer)
       sql = "SELECT * FROM #{self.table_name} WHERE #{thing.keys[0].to_s} = '#{thing.values[0]}'"
+      DB[:conn].execute(sql)
       else
       sql = "SELECT * FROM #{self.table_name} WHERE #{thing.keys[0].to_s} = #{thing.values[0]}"
+      DB[:conn].execute(sql)
       end
     end
 
