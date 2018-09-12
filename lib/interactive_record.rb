@@ -56,7 +56,7 @@ class InteractiveRecord
     def self.find_by(thing)
       binding.pry
       col_names_for_insert
-      sql = "SELECT * FROM #{self.table_name} WHERE #{thing1.values.first} = '#{thing2}'"
+      sql = "SELECT * FROM #{self.table_name} WHERE #{thing.values.first} = '#{thing2}'"
     end
 
 end
