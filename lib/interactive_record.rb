@@ -53,8 +53,8 @@ class InteractiveRecord
       DB[:conn].execute(sql)
     end
 
-    def self.find_by(thing)
-      column_name_for_insert
+    def self.find_by(thing,thing)
+      col_names_for_insert
       sql = "SELECT * FROM #{self.table_name} WHERE #{thing} = '#{thing}'"
     end
 
