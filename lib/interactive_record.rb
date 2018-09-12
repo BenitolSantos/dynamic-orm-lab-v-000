@@ -39,6 +39,7 @@ class InteractiveRecord
       values = []
       self.class.column_names.each do |col_name|
         values << "'#{send(col_name)}'" unless send(col_name).nil?
+        #.send is to make it so that you can set variables in your class dynamically in metaprogramming
       end
       values.join(", ")
     end
